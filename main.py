@@ -16,7 +16,7 @@ def update_status(text, emoji, emoji_id):
     
     if r.status_code == 200:
         print("Status updated")
-        time.sleep(delay)
+        time.sleep(int(delay))
     elif r.status_code == 401:
         print("Invalid token")
         input('')

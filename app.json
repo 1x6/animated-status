@@ -14,6 +14,14 @@
         "token": {
           "description": "The token of the account you want to run the status on.",
           "value": ""
+    },
+          "delay": {
+        "description": "Delay per message in seconds",
+        "value": "1"
+    },
+         "ratelimitdelay": {
+        "description": "How long to wait before trying to update status again after a 429",
+        "value": "5"
     }
   }
 }

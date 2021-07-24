@@ -1,1 +1,1 @@
-python: status.py
+python: main.py

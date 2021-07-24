@@ -1,21 +1,22 @@
-import requests, time
+import requests, time, os
 
-token = 'sus' # your discord token
-delay = 1 # delay in seconds
-ratelimitdelay = 5 # how long to wait before trying to update status again
+token = os.environ['token'] # your discord token
+delay = os.environ['delay'] # delay in seconds
+ratelimitdelay = os.environ['ratelimitdelay'] # how long to wait before trying to update status again
 
 headers = {"Authorization": token,
+            "content-type": "application/json",
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36"}
             # using the discord app's user-agent to avoid being sus
 
 def update_status(text, emoji, emoji_id): 
-    r = requests.patch("https://discord.com/api/v9/users/@me/settings", headers=headers, data={
+    r = requests.patch("https://discord.com/api/v9/users/@me/settings", headers=headers, json={
         "status":"online","custom_status":{"text":text,"emoji_id":int(emoji_id),"emoji_name":emoji}
                                                                                             })
     
     if r.status_code == 200:
         print("Status updated")
-        time.sleep(delay)
+        time.sleep(int(delay))
     elif r.status_code == 401:
         print("Invalid token")
         input('')

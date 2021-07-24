@@ -1,0 +1,27 @@
+{
+    "name": "animated-status",
+    "description": "very hot animated status, easy customization and clean update function",
+    "repository": "https://github.com/1x6/animated-status",
+    "logo": "https://cdn.discordapp.com/avatars/852810538487906334/a_809bd5df44019b31d222c471d8ce4961.gif?size=1024",
+    "website": "https://github.com/1x6/animated-status",
+    "keywords": ["python"],
+    
+    "buildpacks": [{"url": "heroku/python"}],
+
+
+
+      "env": {
+        "token": {
+          "description": "The token of the account you want to run the status on.",
+          "value": ""
+    },
+          "delay": {
+        "description": "Delay per message in seconds",
+        "value": "5"
+    },
+         "ratelimitdelay": {
+        "description": "How long to wait before trying to update status again after a 429",
+        "value": "10"
+    }
+  }
+}

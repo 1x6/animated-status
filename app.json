@@ -5,13 +5,12 @@
     "logo": "https://cdn.discordapp.com/avatars/852810538487906334/a_809bd5df44019b31d222c471d8ce4961.gif?size=1024",
     "website": "https://github.com/1x6/animated-status",
     "keywords": ["python"],
-
-        "buildpacks": [
+    "buildpacks": [
         {
       "url": "heroku/python"
-    }
-  ]
-},
+        }
+                    ],
+
 
 
   "env": {

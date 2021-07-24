@@ -17,11 +17,11 @@
     },
           "delay": {
         "description": "Delay per message in seconds",
-        "value": "1"
+        "value": "5"
     },
          "ratelimitdelay": {
         "description": "How long to wait before trying to update status again after a 429",
-        "value": "5"
+        "value": "10"
     }
   }
 }

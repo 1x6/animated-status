@@ -5,6 +5,7 @@ delay = os.environ['delay'] # delay in seconds
 ratelimitdelay = os.environ['ratelimitdelay'] # how long to wait before trying to update status again
 
 headers = {"Authorization": token,
+            "content-type": "application/json",
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36"}
             # using the discord app's user-agent to avoid being sus
 

@@ -10,7 +10,7 @@ headers = {"Authorization": token,
             # using the discord app's user-agent to avoid being sus
 
 def update_status(text, emoji, emoji_id): 
-    r = requests.patch("https://discord.com/api/v9/users/@me/settings", headers=headers, data={
+    r = requests.patch("https://discord.com/api/v9/users/@me/settings", headers=headers, json={
         "status":"online","custom_status":{"text":text,"emoji_id":int(emoji_id),"emoji_name":emoji}
                                                                                             })
     

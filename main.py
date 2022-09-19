@@ -6,8 +6,9 @@ ratelimitdelay = os.environ['ratelimitdelay'] # how long to wait before trying t
 
 headers = {"Authorization": token,
             "content-type": "application/json",
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36"}
-            # using the discord app's user-agent to avoid being sus
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:104.0) Gecko/20100101 Firefox/104.0",
+            "X-Super-Properties": "eyJvcyI6IldpbmRvd3MiLCJicm93c2VyIjoiRmlyZWZveCIsImRldmljZSI6IiIsInN5c3RlbV9sb2NhbGUiOiJlbi1HQiIsImJyb3dzZXJfdXNlcl9hZ2VudCI6Ik1vemlsbGEvNS4wIChXaW5kb3dzIE5UIDEwLjA7IFdpbjY0OyB4NjQ7IHJ2OjEwNC4wKSBHZWNrby8yMDEwMDEwMSBGaXJlZm94LzEwNC4wIiwiYnJvd3Nlcl92ZXJzaW9uIjoiMTA0LjAiLCJvc192ZXJzaW9uIjoiMTAiLCJyZWZlcnJlciI6IiIsInJlZmVycmluZ19kb21haW4iOiIiLCJyZWZlcnJlcl9jdXJyZW50IjoiIiwicmVmZXJyaW5nX2RvbWFpbl9jdXJyZW50IjoiIiwicmVsZWFzZV9jaGFubmVsIjoic3RhYmxlIiwiY2xpZW50X2J1aWxkX251bWJlciI6MTQ3NjE2LCJjbGllbnRfZXZlbnRfc291cmNlIjpudWxsfQ=="}
+
 
 def update_status(text, emoji, emoji_id): 
     r = requests.patch("https://discord.com/api/v9/users/@me/settings", headers=headers, json={
@@ -15,7 +16,7 @@ def update_status(text, emoji, emoji_id):
                                                                                             })
     
     if r.status_code == 200:
-        print("Status updated")
+        #print("Status updated")
         time.sleep(int(delay))
     elif r.status_code == 401:
         print("Invalid token")
@@ -31,8 +32,13 @@ def update_status(text, emoji, emoji_id):
 
 while True:
 #   update_status("Message", ":emoji_name:", "123456789 emoji id")
-    update_status("rekt", "02heh", "643505002387865620")
-    update_status("certified discord tos follower", "CatKiss", "857364278176907275")
-    update_status("https://namemc.com/unpacks", "Minecraft", "811260964813013012")
-    update_status("https://hypixel.one", "CatKiss", "857364278176907275")
+    update_status("i'm only a fool for you", "ctks", "925798465529872385")
+    update_status("best bedwars player (real)", "ctks", "925798465529872385")
+    update_status("https://xeny.uk", "ctks", "925798465529872385")
+    update_status("i'm a bot (jk)", "ctks", "925798465529872385")
+    update_status("https://youtu.be/f6iV6eK5dC4", "ctks", "925798465529872385")
+    update_status("catboys >> ", "ctks", "925798465529872385")
+    update_status("zzzzz", "ctks", "925798465529872385")
+    update_status("I wonder what the CIA's opinion is on yaoi.", "ctks", "925798465529872385")
+
 
